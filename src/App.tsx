@@ -27,10 +27,10 @@ function App() {
   const sendToGlasses = async (text: string) => {
     try {
       const bridge = await waitForEvenAppBridge();
-      const req: TextContainerUpgrade = {
-         containerId: "status_text",
-         property: { text: text }
-      };
+      const req = new TextContainerUpgrade({
+         containerID: 1,
+         content: text
+      });
       await bridge.textContainerUpgrade(req);
     } catch (e) {
       // 로컬 개발/시뮬레이터 환경에서는 에러 없이 무시 (터미널에서만 확인)
