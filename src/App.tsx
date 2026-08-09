@@ -5,7 +5,7 @@ import mqtt from 'mqtt';
 
 const SERVICE_UUID = '19b10000-e8f2-537e-4f6c-d104768a1214';
 const CHAR_UUID = '19b10001-e8f2-537e-4f6c-d104768a1214';
-const MQTT_BROKER = 'wss://broker.emqx.io:8083/mqtt';
+const MQTT_BROKER = 'wss://broker.emqx.io:8084/mqtt';
 const MQTT_TOPIC = 'eudaemonic_pie_seykim_roulette_cmd'; // Hardcoded unique topic
 
 type AppMode = 'SELECT' | 'HUD' | 'CONTROLLER';
@@ -219,7 +219,7 @@ function App() {
   return (
     <div style={{ padding: '16px', maxWidth: '500px', margin: '0 auto', fontFamily: 'sans-serif' }}>
       <h1 style={{ margin: '0 0 4px', fontSize: '24px' }}>Eudaemonic Pie</h1>
-      <p style={{ color: '#888', margin: '0 0 20px', fontSize: '13px' }}>v0.1.26 | MQTT Distributed</p>
+      <p style={{ color: '#888', margin: '0 0 20px', fontSize: '13px' }}>v0.1.27 | MQTT Distributed</p>
       
       {appMode === 'SELECT' && (
         <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
