@@ -10,7 +10,7 @@ const MQTT_TOPIC = 'eudaemonic_pie_seykim_roulette_cmd'; // Hardcoded unique top
 
 type AppMode = 'SELECT' | 'HUD' | 'CONTROLLER';
 type Phase = 'DIRECTION' | 'ROTOR' | 'BALL';
-const COOLDOWN_TIME = 300; 
+const COOLDOWN_TIME = 100; // 300ms는 너무 길어서 더블탭(150~250ms)을 씹어버림
 const DOUBLE_TAP_WINDOW = 600; 
 
 function App() {
@@ -219,7 +219,7 @@ function App() {
   return (
     <div style={{ padding: '16px', maxWidth: '500px', margin: '0 auto', fontFamily: 'sans-serif' }}>
       <h1 style={{ margin: '0 0 4px', fontSize: '24px' }}>Eudaemonic Pie</h1>
-      <p style={{ color: '#888', margin: '0 0 20px', fontSize: '13px' }}>v0.1.27 | MQTT Distributed</p>
+      <p style={{ color: '#888', margin: '0 0 20px', fontSize: '13px' }}>v0.1.28 | MQTT Distributed</p>
       
       {appMode === 'SELECT' && (
         <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
